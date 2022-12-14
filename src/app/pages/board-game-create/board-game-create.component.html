@@ -1,0 +1,31 @@
+    <form *ngIf="boardGameForm" [formGroup]="boardGameForm"  class="board-game-create-form">
+
+          <mat-form-field class="input-format" appearance="fill">
+            <mat-label>Título</mat-label>
+            <input matInput formControlName="title" >
+          </mat-form-field>
+
+          <mat-form-field class="input-format" appearance="fill">
+            <mat-label>Idade Mínima</mat-label>
+            <input matInput formControlName="minimalAge">
+          </mat-form-field>
+
+          <mat-form-field class="input-format" appearance="fill">
+            <mat-label>Tempo médio de partida (min)</mat-label>
+            <input matInput formControlName="playTime">
+          </mat-form-field>
+
+          <mat-form-field class="input-format" appearance="fill">
+            <mat-label>Número de jogadores</mat-label>
+            <input matInput formControlName="playersNumber">
+          </mat-form-field>
+
+          <mat-form-field class="input-format" appearance="fill">
+            <mat-label>Descrição</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+          </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="goToList()" (click)="SubmitForm()">Adicionar na Lista</button>
+    </form>
+    
+

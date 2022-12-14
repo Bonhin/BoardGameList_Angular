@@ -1,0 +1,26 @@
+<form *ngIf="boardGameForm" [formGroup]="boardGameForm"  class="board-game-att-form">
+
+    <h1>{{this.attBoardGame?.title}}</h1>
+
+    <mat-form-field class="input-format" appearance="fill">
+      <mat-label>Idade Mínima</mat-label>
+      <input matInput formControlName="minimalAge">
+    </mat-form-field>
+
+    <mat-form-field class="input-format" appearance="fill">
+      <mat-label>Tempo médio de partida (min)</mat-label>
+      <input matInput formControlName="playTime">
+    </mat-form-field>
+
+    <mat-form-field class="input-format" appearance="fill">
+      <mat-label>Número de jogadores</mat-label>
+      <input matInput formControlName="playersNumber">
+    </mat-form-field>
+
+    <mat-form-field class="input-format" appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="attItem()">Atualizar</button>
+</form>

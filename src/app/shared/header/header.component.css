@@ -1,0 +1,14 @@
+mat-toolbar {
+    background-color: cornflowerblue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-format{
+    margin: 5px;
+}
+
+.active{
+    background-color: #5e35b1;
+}

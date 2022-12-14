@@ -1,0 +1,37 @@
+<mat-expansion-panel hideToggle [ngStyle]="{backgroundColor : setColor()}">
+    <mat-expansion-panel-header class="height-panel-header">            
+            <mat-radio-group value="none">
+                <mat-radio-button                 
+                    (click)="$event.stopPropagation()"
+                    (click)="changeHaveStatus()"
+                    [checked]="this.boardGame?.have">                    
+                    Tenho
+                </mat-radio-button>
+                <mat-radio-button 
+                    (click)="$event.stopPropagation()"
+                    (click)="changeWantStatus()"
+                    [checked]="this.boardGame?.want">                    
+                    Quero
+                </mat-radio-button>
+            </mat-radio-group>
+        <mat-panel-title>
+           <h3><b *ngIf="this.boardGame?.minimalAge">{{this.boardGame?.title}}</b></h3>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ul>
+        <li *ngIf="this.boardGame?.minimalAge"><b>Idadade Mínima: </b>{{this.boardGame?.minimalAge}} anos</li>
+        <li *ngIf="this.boardGame?.playTime"><b>Tempo médio de partida: </b>{{this.boardGame?.playTime}} min</li>
+        <li *ngIf="this.boardGame?.playersNumber"><b>Número mínimo de jogadores:</b> {{this.boardGame?.playersNumber}}</li>
+        <li class="justify-text" *ngIf="this.boardGame?.description"><b>Descrição:</b> {{this.boardGame?.description}}</li>
+    </ul>
+
+    <div class="postion-button">
+        <button mat-flat-button color="accent" class="format-buttton"(click)="goToAtt()"><mat-icon>edit</mat-icon>Editar</button>
+        <button mat-flat-button color="warn" class="format-buttton" (click)="alertConfirmation()"><mat-icon>delete</mat-icon>Excluir</button>
+    </div>
+    
+    <!-- <app-att-board-game [attBoardGame]="this.boardGame"></app-att-board-game> -->
+    
+</mat-expansion-panel>
+
+
